@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Présentation</title>
+    <!--<link rel="stylesheet" href="projet.css">-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="style/materialize.min.css"  media="screen,projection"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="jquery-3.1.1.min.js"></script>
+    <style >
+    ::-webkit-scrollbar{
+      display:none;
+    }
+    .allcontent{
+      height: 100vh;
+    width: 100vw;
+    }
+    body{
+      margin:0 !important;
+      background-color:#000;
+      color: #fff;
+      font-size:2em;
+    }
+    a{
+      text-decoration: none;
+      color:#e3e3e3;
+    }
+    .bcontent{
+      position:absolute;
+      top:42vh;
+      left:42vw;
+      text-align: center;
+    }
+    li{
+      list-style-type:none;
+    }
+    #xp:hover{
+      cursor: pointer;
+    }
+    .textinfo{
+      visibility: hidden;
+      position: absolute;
+      top:10vh;
+      margin-left: -15vw;
+      z-index:1;
+      text-align:center;
+      border: solid 1px #aaa;
+    border-radius: 25px;
+    padding: 10px;
+    color: black;
+    background-color: #aaa
+    }
+    .t1:hover .textinfo, .t2:hover .textinfo, .t3:hover .textinfo, .t4:hover .textinfo, .t5:hover .textinfo{
+      visibility: visible;
+    }
+    .t1,.t2,.t3,.t4,.t5,.t6{
+      position:relative;
+    display:inline-block
+    }
+    .t1 .textinfo::after, .t2 .textinfo::after, .t3 .textinfo::after, .t4 .textinfo::after, .t5 .textinfo::after {
+    content: " ";
+    position: absolute;
+    bottom: 100%;  /* At the top of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #aaa transparent;
+}
+.histoire{
+  position: absolute;
+    top: -25vh;
+    left: -15vw;
+    color: #000;
+    background-color: #e3e3e3;
+    width: 50vw;
+    display:none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="bienvenue page space-frame" data-duration="1" data-exit="rotate360 zoomIn fadeOut">
+      <div class="allcontent space-inner-frame">
+        <div class="bcontent">
+          <h1>Bonjour <br>&amp;<br>Bienvenue !</h1>
+        </div>
+      </div>
+    </div>
+    <div class="competence page space-frame" data-duration="1.5" data-enter="zoomIn slideInLeft" data-exit="slideOutRight fadeOut zoomOut">
+      <div class="bcontent space-inner-frame">
+        <h3>Développeur Web depuis bientot deux ans je me spécialise en Javascript.<br> J'utilise régulierement differentes librairies Javascript:</h3>
+        <ul>
+          <li><a href="https://jquery.com/" target="_blank">jquery <i class="tiny material-icons">visibility</i></a></li>
+          <li><a href="http://materializecss.com/" target="_blank">Materialize <i class="tiny material-icons">visibility</i></a></li>
+          <li><a href="https://vuejs.org/" target="_blank">Vue <i class="tiny material-icons">visibility</i></a></li>
+          <li><a href="https://nodejs.org/en/" target="_blank">NodeJS <i class="tiny material-icons">visibility</i></a></li>
+          <li><a href="https://www.polymer-project.org/1.0/" target="_blank">Polymer <i class="tiny material-icons">visibility</i></a></li>
+        </ul>
+        <p>j'utilise aussi differentes plateforme d'hébergement comme <a href="https://firebase.google.com/" target="_blank">FireBase <i class="tiny material-icons">visibility</i></a>, <a href="https://cloud.google.com/" target="_blank">Google-Cloud <i class="tiny material-icons">visibility</i></a>, <a href="https://aws.amazon.com/fr/" target="_blank">Amazon-Web-Services <i class="tiny material-icons">visibility</i></a> et <a href="https://www.heroku.com/platform" target="_blank">Heroku <i class="tiny material-icons">visibility</i></a></p>
+      </div>
+    </div>
+    <div class="experiences page space-frame" data-duration="1">
+        <div class="bcontent space-inner-frame">
+          <h1>Mon parcours</h1>
+          <p id="xp"><i class="large material-icons" style="font-size:80px !important;">settings_overscan</i></p>
+          <div class="histoire">
+            <p class="t1">2012 j'obtiens mon diplôme Technicien Réseaux et Télécommunication d'Entreprise.<span class='textinfo'>École de formation LASER <br>43 Rue des Rigoles, 75020 Paris</span></p>
+            <p class="t2">2013-2015 j'ai travaillé en tant que technicien réseaux pour "l'École d'Architecture de Paris Belleville"<span class='textinfo'>ENSAPB <br>60 Boulevard de la Villette, 75019 Paris</span></p>
+            <p class="t3">2014 j'apprends la programmation orientée objet<span class='textinfo'>Formation au développement d'application Android en Java.</span></p>
+            <p class="t4">2015 je m'oriente vers le Web et decide de me spécialiser en Javascript.<span class='textinfo'>Autoformation sur internet</span></p>
+            <p class="t5">2015 je passe au statut d'auto-entrepreneur<span class='textinfo'>Autoformation sur internet, suite...</span></p>
+            <p class="t6">j'usqu'à maintenant j'ai travailler sur différents project, toujours soucieux des besoins de mes clients je travail aussi bien sur des CMS qu'en dévellopement pur.</p>
+          </div>
+        </div>
+    </div>
+    <div class="demo space-frame" data-duration="4" data-enter="rotate360 rotate3dOut">
+      <div class="bcontent space-inner-frame">
+        <h3>Mes dernières trouvailles:</h3>
+        <ul>
+          <li><a href="http://infos.x5-web.com/" target="_blank">Materialize <i class="tiny material-icons">visibility</i></a></li>
+          <li><a href="#">Vue &amp; NodeJS &amp; Socket.io <i class="tiny material-icons">visibility_off</i></a></li>
+        </ul>
+      </div>
+    </div>
+    <script src="space.js"></script>
+    <script src='main.js'></script>
+  </body>
+</html>
